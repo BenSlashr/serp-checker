@@ -10,15 +10,12 @@ import os
 from typing import List, Dict, Any
 import aiofiles
 
-# Configuration pour le déploiement avec préfixe
-PREFIX = "/serp-checker"
-
 app = FastAPI(
     title="SERP Checker", 
     description="Outil pour scraper les SERP via ValueSerp API",
-    docs_url=f"{PREFIX}/docs",
-    redoc_url=f"{PREFIX}/redoc",
-    openapi_url=f"{PREFIX}/openapi.json"
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json"
 )
 
 # Configuration CORS
@@ -34,21 +31,16 @@ app.add_middleware(
 VALUESERP_API_KEY = os.getenv("VALUESERP_API_KEY", "your_api_key_here")
 VALUESERP_API_URL = "https://api.valueserp.com/search"
 
-# Servir les fichiers statiques avec le préfixe
-app.mount(f"{PREFIX}/static", StaticFiles(directory="static"), name="static")
+# Servir les fichiers statiques
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
-@app.get(f"{PREFIX}/", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse)
 async def read_root():
     async with aiofiles.open("static/index.html", mode="r", encoding="utf-8") as f:
         content = await f.read()
     return HTMLResponse(content=content)
 
-@app.get(f"{PREFIX}", response_class=HTMLResponse)
-async def read_root_alt():
-    """Endpoint alternatif sans slash final"""
-    return await read_root()
-
-@app.post(f"{PREFIX}/api/scrape-serp")
+@app.post("/api/scrape-serp")
 async def scrape_serp(request: Dict[str, Any]):
     """
     Scrape les SERP pour une liste de mots-clés
@@ -127,7 +119,7 @@ async def scrape_serp(request: Dict[str, Any]):
     
     return {"results": results}
 
-@app.post(f"{PREFIX}/api/download-csv")
+@app.post("/api/download-csv")
 async def download_csv(data: Dict[str, Any]):
     """
     Génère et retourne un fichier CSV des résultats SERP
@@ -160,7 +152,7 @@ async def download_csv(data: Dict[str, Any]):
         "content_type": "text/csv"
     }
 
-@app.post(f"{PREFIX}/api/download-json")
+@app.post("/api/download-json")
 async def download_json(data: Dict[str, Any]):
     """
     Retourne les résultats au format JSON
@@ -172,7 +164,7 @@ async def download_json(data: Dict[str, Any]):
     }
 
 # Endpoint de santé pour vérifier que l'API fonctionne
-@app.get(f"{PREFIX}/health")
+@app.get("/health")
 async def health_check():
     """Endpoint de santé pour vérifier que l'API fonctionne"""
     return {

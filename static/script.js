@@ -42,7 +42,7 @@ async function handleScrape() {
     
     try {
         // Appel à l'API
-        const response = await fetch('/serp-checker/api/scrape-serp', {
+        const response = await fetch('/api/scrape-serp', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -181,7 +181,7 @@ async function downloadResults(format) {
     }
     
     try {
-        const endpoint = format === 'csv' ? '/serp-checker/api/download-csv' : '/serp-checker/api/download-json';
+        const endpoint = format === 'csv' ? '/api/download-csv' : '/api/download-json';
         
         const response = await fetch(endpoint, {
             method: 'POST',

@@ -73,19 +73,19 @@ Outil ultra-simple pour scraper les SERP (Search Engine Results Pages) via l'API
 ## 🌐 URLs d'accès
 
 ### Développement local
-- Interface web : http://localhost:8000/serp-checker/
-- Documentation API : http://localhost:8000/serp-checker/docs
-- Endpoint de santé : http://localhost:8000/serp-checker/health
+- Interface web : http://localhost:8000/
+- Documentation API : http://localhost:8000/docs
+- Endpoint de santé : http://localhost:8000/health
 
 ### Déploiement Docker
-- Interface web : http://localhost:8015/serp-checker/
-- Documentation API : http://localhost:8015/serp-checker/docs
-- Endpoint de santé : http://localhost:8015/serp-checker/health
+- Interface web : http://localhost:8015/
+- Documentation API : http://localhost:8015/docs
+- Endpoint de santé : http://localhost:8015/health
 
-### Production (agence-slashr.fr)
-- Interface web : https://agence-slashr.fr/serp-checker/
-- Documentation API : https://agence-slashr.fr/serp-checker/docs
-- Endpoint de santé : https://agence-slashr.fr/serp-checker/health
+### Production (outils.agence-slashr.fr)
+- Interface web : https://outils.agence-slashr.fr/serp-checker/
+- Documentation API : https://outils.agence-slashr.fr/serp-checker/docs
+- Endpoint de santé : https://outils.agence-slashr.fr/serp-checker/health
 
 ## 📖 Utilisation
 
@@ -166,13 +166,12 @@ SERP-checker/
 
 ## 🔌 API Endpoints
 
-- `GET /serp-checker/` : Interface web principale
-- `GET /serp-checker` : Interface web (sans slash final)
-- `POST /serp-checker/api/scrape-serp` : Scraping des SERP
-- `POST /serp-checker/api/download-csv` : Téléchargement CSV
-- `POST /serp-checker/api/download-json` : Téléchargement JSON
-- `GET /serp-checker/health` : Endpoint de santé
-- `GET /serp-checker/docs` : Documentation interactive de l'API
+- `GET /` : Interface web principale
+- `POST /api/scrape-serp` : Scraping des SERP
+- `POST /api/download-csv` : Téléchargement CSV
+- `POST /api/download-json` : Téléchargement JSON
+- `GET /health` : Endpoint de santé
+- `GET /docs` : Documentation interactive de l'API
 
 ## 🐳 Commandes Docker utiles
 
