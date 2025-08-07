@@ -1,0 +1,40 @@
+# Fichiers de développement
+.git
+.gitignore
+README.md
+.env
+.venv
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Fichiers de déploiement
+nginx.conf
+serp-checker.service
+deploy.sh
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Fichiers temporaires
+*.tmp
+*.temp
+logs/ 

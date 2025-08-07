@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  serp-checker:
+    build: .
+    container_name: serp-checker
+    restart: unless-stopped
+    ports:
+      - "8015:8000"
+    environment:
+      - VALUESERP_API_KEY=${VALUESERP_API_KEY:-your_api_key_here}
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - seo-tools-network
+
+networks:
+  seo-tools-network:
+    external: true 

@@ -1,0 +1,47 @@
+[
+  {
+    "mot_cle": "vice caché immobilier",
+    "serp_results": [
+      {
+        "position": 1,
+        "titre": "Vice caché immobilier : définition, recours et délais - Service-Public.fr",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F11007",
+        "snippet": "Un vice caché est un défaut qui rend le logement impropre à l'habitation. L'acheteur peut obtenir l'annulation de la vente ou une réduction du prix.",
+        "type_resultat": "organique"
+      },
+      {
+        "position": 2,
+        "titre": "Comment prouver un vice caché dans une maison ? - Le Figaro Immobilier",
+        "url": "https://immobilier.lefigaro.fr/annonces/edito/acheter/les-conseils-a-l-achat/comment-prouver-un-vice-cache",
+        "snippet": "Pour prouver le vice caché, l'acquéreur doit faire appel à un expert qui constatera le défaut, son antériorité à la vente et son caractère non apparent.",
+        "type_resultat": "organique"
+      },
+      {
+        "position": 3,
+        "titre": "Qu'est-ce qu'un vice caché ? (vidéo) - YouTube",
+        "url": "https://www.youtube.com/watch?v=xxxxxxxx",
+        "snippet": "Dans cette vidéo, notre expert juriste vous explique en 3 minutes ce qu'est un vice caché et comment vous défendre.",
+        "type_resultat": "video"
+      }
+    ]
+  },
+  {
+    "mot_cle": "créer sa micro-entreprise",
+    "serp_results": [
+      {
+        "position": 1,
+        "titre": "Créer sa micro-entreprise : les étapes de la création - Infogreffe",
+        "url": "https://www.infogreffe.fr/formalites-entreprise/creer-sa-micro-entreprise.html",
+        "snippet": "Suivez notre guide pour déclarer votre micro-entreprise en ligne. Toutes les démarches sur le Guichet unique de l'INPI.",
+        "type_resultat": "organique"
+      },
+      {
+        "position": 2,
+        "titre": "Comment devenir auto-entrepreneur en 2025 ? - Legalstart",
+        "url": "https://www.legalstart.fr/fiches-pratiques/auto-entrepreneur/devenir-auto-entrepreneur/",
+        "snippet": "Devenir auto-entrepreneur (micro-entrepreneur) est simple. Découvrez les conditions à remplir et les formalités à accomplir pour créer votre activité.",
+        "type_resultat": "organique"
+      }
+    ]
+  }
+] 
